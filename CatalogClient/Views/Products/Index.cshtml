@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CatalogClient.Models.Product>
+@{
+    ViewData["Title"] = "Каталог (Клиент)";
+}
+
+<h1>Каталог товаров (данные с сервера)</h1>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-auto">
+        <input type="text" name="search" value="@ViewBag.Search" class="form-control" placeholder="Поиск" />
+    </div>
+    <div class="col-auto">
+        <select name="categoryId" class="form-select" asp-items="@(ViewBag.Categories as SelectList)">
+            <option value="">Все категории</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Фильтр</button>
+        <a asp-action="Index" class="btn btn-secondary">Сброс</a>
+    </div>
+</form>
+
+<p><a asp-action="Create" class="btn btn-success">+ Добавить товар</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>Название</th><th>Цена</th><th>Категория</th><th></th></tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price.ToString("C")</td>
+                <td>@p.Category?.Name</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.Id" class="btn btn-sm btn-info">Детали</a>
+                    <a asp-action="Edit" asp-route-id="@p.Id" class="btn btn-sm btn-warning">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@p.Id" class="btn btn-sm btn-danger">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+﻿@model CatalogClient.Models.Product
+@{
+    ViewData["Title"] = "Товар";
+}
+
+<h1>@Model.Name</h1>
+<dl class="row">
+    <dt class="col-sm-2">Цена</dt>
+    <dd class="col-sm-10">@Model.Price.ToString("C")</dd>
+    <dt class="col-sm-2">Категория</dt>
+    <dd class="col-sm-10">@Model.Category?.Name</dd>
+</dl>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Изменить</a>
+<a asp-action="Index" class="btn btn-secondary">Назад</a>
