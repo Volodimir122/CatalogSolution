@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Владимир\\Desktop\\CatalogClient\\CatalogClient.csproj",
+      "projectUniqueName": "C:\\Users\\Владимир\\Desktop\\CatalogSolution\\CatalogClient\\CatalogClient.csproj",
       "projectName": "CatalogClient",
-      "projectPath": "C:\\Users\\Владимир\\Desktop\\CatalogClient\\CatalogClient.csproj",
+      "projectPath": "C:\\Users\\Владимир\\Desktop\\CatalogSolution\\CatalogClient\\CatalogClient.csproj",
       "packagesPath": "C:\\Users\\Владимир\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Владимир\\Desktop\\CatalogClient\\obj\\",
+      "outputPath": "C:\\Users\\Владимир\\Desktop\\CatalogSolution\\CatalogClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
